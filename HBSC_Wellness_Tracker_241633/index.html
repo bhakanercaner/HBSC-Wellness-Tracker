@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HBSC Wellness Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>Младински Wellness Tracker</h1>
+      <p>
+        Дигитално решение инспирирано од HBSC податоците за подобрување на
+        менталното здравје, здравите навики и добросостојбата кај младите.
+      </p>
+      <button onclick="scrollToApp()">Започни</button>
+    </div>
+  </header>
+
+  <section class="info-section">
+    <h2>Зошто е важна оваа апликација?</h2>
+    <p>
+      Многу млади се соочуваат со стрес, анксиозност, недоволно спиење,
+      намалена физичка активност и притисок од училиштето или социјалните мрежи.
+      Оваа апликација им помага на учениците и студентите да го следат своето
+      расположение и секојдневни навики.
+    </p>
+  </section>
+  <section class="stats">
+
+<div class="stat">
+
+<h2>11-15</h2>
+
+<p>Возраст според HBSC студијата</p>
+
+</div>
+
+<div class="stat">
+
+<h2>4</h2>
+
+<p>Главни wellness индикатори</p>
+
+</div>
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Интерактивно веб решение</p>
+
+</div>
+
+</section>
+
+  <main id="app" class="container">
+
+    <section class="card">
+      <h2>Како се чувствуваш денес?</h2>
+      <div class="mood-buttons">
+        <button onclick="selectMood('Среќен 😊')">Среќен 😊</button>
+        <button onclick="selectMood('Неутрален 😐')">Неутрален 😐</button>
+        <button onclick="selectMood('Стресен 😟')">Стресен 😟</button>
+        <button onclick="selectMood('Тажен 😢')">Тажен 😢</button>
+      </div>
+      <p id="moodResult">Избери го твоето расположение.</p>
+    </section>
+
+    <section class="card">
+      <h2>Проверка на навики</h2>
+
+      <label>Колку часа спиеше минатата ноќ?</label>
+      <input type="number" id="sleep" placeholder="на пример: 7" />
+
+      <label>Колку минути физичка активност имаше денес?</label>
+      <input type="number" id="activity" placeholder="на пример: 30" />
+
+      <label>Колку часа помина онлајн денес?</label>
+      <input type="number" id="screen" placeholder="на пример: 4" />
+
+      <button onclick="checkHabits()">Провери навики</button>
+
+      <div id="habitResult" class="result-box"></div>
+    </section>
+
+    <section class="card">
+      <h2>Дневен wellness предизвик</h2>
+      <p id="challengeText">
+        Кликни на копчето за да добиеш мал дневен предизвик.
+      </p>
+      <button onclick="newChallenge()">Нов предизвик</button>
+    </section>
+
+    <section class="card">
+      <h2>Мини дневник</h2>
+      <textarea id="diary" placeholder="Напиши како помина твојот ден..."></textarea>
+      <button onclick="saveDiary()">Зачувај белешка</button>
+      <p id="diaryMessage"></p>
+    </section>
+
+    <section class="card">
+      <h2>Краток опис на решението</h2>
+      <p>
+        Овој прототип претставува едноставна веб-апликација за млади луѓе.
+        Целта е да се поттикне самосвест, подобри навики, подобро управување
+        со стресот и поголема грижа за менталното здравје.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Проект изработен за предметот ПНУВ | Faculty of Computer Science & Engineering (FINKI)| Инспирирано од HBSC студијата</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
